@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Foodie Express - Payment & Tracking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+
+<body>
+
+
+
+<div class="container">
+
+    <!-- PAYMENT SECTION -->
+    <div class="card">
+        <h2>Payment Gateway</h2>
+
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9012 3456">
+
+        <label>Expiry Date</label>
+        <input type="text" placeholder="MM/YY">
+
+        <label>CVV</label>
+        <input type="password" placeholder="***">
+
+        <button onclick="payNow()">Pay Now</button>
+    </div>
+
+    <!-- TRACKING SECTION -->
+    <div class="card">
+        <h2>Order Tracking</h2>
+
+        <div class="status-container">
+            <div class="status-bar">
+                <div class="step active" id="step0">
+                    <div class="circle">1</div>
+                    <div class="label">Order Placed</div>
+                </div>
+                <div class="step" id="step1">
+                    <div class="circle">2</div>
+                    <div class="label">Preparing</div>
+                </div>
+                <div class="step" id="step2">
+                    <div class="circle">3</div>
+                    <div class="label">On the Way</div>
+                </div>
+                <div class="step" id="step3">
+                    <div class="circle">4</div>
+                    <div class="label">Delivered</div>
+                </div>
+                <div class="progress-line"></div>
+            </div>
+        </div>
+
+        <div id="map">
+            Live Delivery Map Loading...
+        </div>
+
+    </div>
+
+</div>
+<!-- ===== EXTRA UI (ADD INSIDE BODY BELOW MAP) ===== -->
+
+<!-- LIVE DELIVERY BOY -->
+<div id="deliveryBoy">🚴</div>
+
+<!-- POPUP -->
+<div id="trackingPopup" class="tracking-popup">
+    <div class="tracking-popup-box">
+        <h3>📦 Order Details</h3>
+
+        <p><strong>Order ID:</strong> #FDX12345</p>
+
+        <p><strong>Status:</strong> On the way</p>
+
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<!-- CHAT BOX -->
+<div id="chatBox">
+    <div id="chatHeader">💬 Support Chat</div>
+    <div id="chatBody">
+        <p><b>Support:</b> Hi! How can we help?</p>
+    </div>
+    <input id="chatInput" placeholder="Type message...">
+</div>
+
+<!-- CALL BUTTON -->
+<button id="callBtn" onclick="callSupport()">📞 Call Support</button>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src ="main.js"></script>
+    <script src ="map.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a19e8289db9e14c8',t:'MTc4Mzg0MzE4MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

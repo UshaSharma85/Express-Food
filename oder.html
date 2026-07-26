@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Food</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<div class="order-page">
+
+    <img id="foodImg" src="image/">
+
+    <h2 id="foodName"></h2>
+
+    <h3 id="foodPrice"></h3>
+
+    <form id="orderForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+<textarea id="address" placeholder="Delivery Address" required></textarea>
+
+<button type="submit">
+Continue to Payment
+</button>
+
+</form>
+
+</div>
+
+<script src="main.js"></script>
+
+<script>
+let food = JSON.parse(localStorage.getItem("selectedFood"));
+
+if(food){
+    document.getElementById("foodImg").src = food.image;
+    document.getElementById("foodName").innerHTML = food.name;
+    document.getElementById("foodPrice").innerHTML = "₹" + food.price;
+}
+</script>
+</body>
+</html>

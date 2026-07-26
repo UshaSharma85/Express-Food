@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Express - Order Tracking</title>
+
+   <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🍔 <span>Foodie Express</span>
+</div>
+
+<div class="delivery-time">
+
+<i class="fa-regular fa-clock"></i>
+
+Estimated Delivery :
+<b id="eta">25 min</b>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<h2>Your Order Status</h2>
+
+<div class="timeline">
+
+<div class="step active" id="step1">
+<div class="circle"><i class="fa-solid fa-check"></i></div>
+<div class="text">
+<h3>Order Placed</h3>
+<p>Your order has been placed successfully.</p>
+</div>
+</div>
+
+<div class="step" id="step2">
+<div class="circle"></div>
+<div class="text">
+<h3>Payment Successful</h3>
+<p>Payment received successfully.</p>
+</div>
+</div>
+
+<div class="step" id="step3">
+<div class="circle"></div>
+<div class="text">
+<h3>Restaurant Accepted</h3>
+<p>Restaurant accepted your order.</p>
+</div>
+</div>
+
+<div class="step" id="step4">
+<div class="circle"></div>
+<div class="text">
+<h3>Food Preparing</h3>
+<p>Your food is being prepared.</p>
+</div>
+</div>
+
+<div class="step" id="step5">
+<div class="circle"></div>
+<div class="text">
+<h3>Food Packed</h3>
+<p>Your order has been packed.</p>
+</div>
+</div>
+
+<div class="step" id="step6">
+<div class="circle"></div>
+<div class="text">
+<h3>Out For Delivery</h3>
+<p>Delivery partner is on the way.</p>
+</div>
+</div>
+
+<div class="step" id="step7">
+<div class="circle"></div>
+<div class="text">
+<h3>Delivered</h3>
+<p>Enjoy your meal.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right">
+
+<div class="map-box">
+
+<h2>
+<i class="fa-solid fa-location-dot"></i>
+Live Location
+</h2>
+
+<div id="map"></div>
+
+</div>
+
+<div class="order-box">
+
+<h2>Order Details</h2>
+
+<p><b>Order ID :</b> ORD245786</p>
+
+<p><b>Items :</b></p>
+
+<ul>
+
+<li>🍔 Burger × 1</li>
+
+<li>🍕 Pizza × 1</li>
+
+<li>🥤 Cold Coffee × 1</li>
+
+</ul>
+
+<hr>
+
+<h3>Total Paid : ₹407</h3>
+
+</div>
+
+<div class="delivery-boy">
+
+<img src="file:///E:/rull/image/Men.png.png">
+
+<div>
+
+<h3>Ravi Kumar</h3>
+
+<p>Delivery Partner</p>
+
+<p>⭐ 4.9</p>
+
+<p>📞 9876543210</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- THANK YOU POPUP -->
+
+<div id="popup">
+
+<div class="popup-content">
+
+<h1>🎉</h1>
+
+<h2>Thank You For Ordering</h2>
+
+<p>Your order has been delivered successfully.</p>
+
+<button onclick="location.href='index.html'">
+
+Back To Home
+
+</button>
+
+</div>
+
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src ="main.js"></script>
+<script src ="map.js"></script>
+
+</body>
+</html>

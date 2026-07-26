@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Payment Gateway</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="payment-container">
+
+    <h1>💳 Secure Payment</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event,'upi')">UPI</button>
+        <button class="tab" onclick="openTab(event,'card')">CARD</button>
+        <button class="tab" onclick="openTab(event,'cod')">COD</button>
+    </div>
+
+    <!-- UPI -->
+
+    <div id="upi" class="content active">
+
+        <h2>Pay with UPI</h2>
+
+        <input id="upiId" type="text"
+        placeholder="Enter UPI ID (example@upi)">
+
+        <h3 class="heading">Choose Your App</h3>
+
+        <div class="apps">
+
+            <button class="wallet-btn"
+            onclick="showWallet('phonepe',this)">
+                <img src="image/png.jpg">
+                <span>PhonePe</span>
+            </button>
+
+            <button class="wallet-btn"
+            onclick="showWallet('gpay',this)">
+                <img src="image/google pay.png">
+                <span>Google Pay</span>
+            </button>
+
+            <button class="wallet-btn"
+            onclick="showWallet('paytm',this)">
+                <img src="image/Paytm.png">
+                <span>Paytm</span>
+            </button>
+
+        </div>
+<h3 id="selectedAppText" style="text-align:center;color:#ff4d00;margin-bottom:10px;">
+    Select Payment App
+</h3>
+        <div class="payment-option">
+
+            <span>📱 Pay Using App</span>
+
+            <input
+            type="radio"
+            name="walletOption"
+            value="form"
+            onchange="changeWalletOption()">
+
+        </div>
+
+        <hr>
+
+        <div class="payment-option">
+
+            <span>📷 Scan QR Code</span>
+
+            <input
+            type="radio"
+            name="walletOption"
+            value="qr"
+            onchange="changeWalletOption()">
+
+        </div>
+
+        <div id="walletFields">
+
+            <input
+            type="text"
+            placeholder="Mobile Number">
+
+            <input
+            type="password"
+            placeholder="UPI PIN">
+
+        </div>
+
+        <img id="walletQR" class="qr">
+
+        <button class="pay-btn"
+        onclick="fakePay()">
+            Pay ₹299
+        </button>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div id="card" class="content">
+
+        <h2>Card Payment</h2>
+
+        <input
+        id="cardNumber"
+        placeholder="Card Number">
+
+        <input
+        id="cardHolder"
+        placeholder="Card Holder Name">
+
+        <div class="row">
+
+            <input
+            id="expiry"
+            placeholder="MM/YY">
+
+            <input
+            id="cvv"
+            placeholder="CVV">
+
+        </div>
+
+        <button
+        class="pay-btn"
+        onclick="cardPayment()">
+
+            Pay Now
+
+        </button>
+
+    </div>
+
+    <!-- COD -->
+
+    <div id="cod" class="content">
+
+        <h2>Cash On Delivery</h2>
+
+        <p>
+            Pay after your order is delivered.
+        </p>
+
+        <button
+        class="pay-btn"
+        onclick="paymentProcess('COD')">
+
+            Confirm Order
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Popup -->
+
+<div id="paymentPopup" class="payment-popup">
+
+    <div class="popup-box">
+
+        <div id="loader"
+        class="loader"></div>
+
+        <div id="successIcon"
+        class="coin">
+
+            ✅
+
+        </div>
+
+        <h2 id="popupTitle">
+            Processing Payment...
+        </h2>
+
+        <p id="popupText">
+            Please wait...
+        </p>
+
+    </div>
+
+</div>
+
+<script src ="main.js"></script>
+</body>
+</html>

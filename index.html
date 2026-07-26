@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Express - Food Delivery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+
+<header class="navbar" id="siteNavbar">
+  <a href="index.html" class="logo" style="text-decoration:none">🍔 <span>Foodie Express</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="Categories.html">Categories</a></li>
+    <li class="cart"><a href="javascript:void(0)" id="cartBtn">Your Cart 🛒 <span id="cartCount">0</span></a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+</header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-decor decor1">🍲</div>
+    <div class="hero-decor decor2">🍕</div>
+    <div class="hero-decor decor3">🍕</div>
+    <div class="hero-decor decor4">🍕</div>
+
+    <div class="hero-text">
+      <div class="location">📍 Delhi</div>
+      <h1>Discover restaurants that deliver near you</h1>
+      <div class="search-box">
+        <input type="text" placeholder="Enter delivery address">
+        <button>Search</button>
+      </div>
+    </div>
+
+    <div class="devices">
+      <!-- TABLET -->
+      <div class="tablet-frame">
+        <div class="tablet-screen">
+          <div class="app-topbar">
+            <span>☰</span>
+            <span class="brand">Foodie Express</span>
+            <span class="icon">🛒<span class="dot"></span></span>
+          </div>
+          <div class="app-scroll-wrapper" id="tabletWrapper">
+            <div class="app-scroll" id="tabletScroll">
+              <div class="greeting">
+                <p>Hello, John</p>
+                <h2>What would you <span>like</span> to order?</h2>
+              </div>
+              <div class="app-search">🔍 Search for restaurants or dishes...</div>
+
+              <div class="categories">
+                <div class="cat-item"><div class="cat-circle">🍕</div><p>Pizza</p></div>
+                <div class="cat-item"><div class="cat-circle">🍔</div><p>Burger</p></div>
+                <div class="cat-item"><div class="cat-circle">🍝</div><p>Pasta</p></div>
+                <div class="cat-item"><div class="cat-circle">🍣</div><p>Sushi</p></div>
+                <div class="cat-item"><div class="cat-circle">🍰</div><p>Desserts</p></div>
+              </div>
+
+              <div class="cat-title"><h4>Popular Restaurants</h4><span>View all</span></div>
+              <div class="restaurant-grid" id="tabletContent">
+                <div class="rest-card"><div class="img pizza">🍕</div><div class="info"><h5>Pizza Palace</h5><div class="meta"><span class="rating">★ 4.3</span><span>25-35 min</span></div><div class="free">Free Delivery</div></div></div>
+                <div class="rest-card"><div class="img burger">🍔</div><div class="info"><h5>Burger House</h5><div class="meta"><span class="rating">★ 4.3</span><span>20-30 min</span></div><div class="free">Free Delivery</div></div></div>
+                <div class="rest-card"><div class="img pasta">🍝</div><div class="info"><h5>Pasta Hub</h5><div class="meta"><span class="rating">★ 4.3</span><span>25-35 min</span></div><div class="free">Free Delivery</div></div></div>
+                <div class="rest-card"><div class="img sushi">🍣</div><div class="info"><h5>Sushi World</h5><div class="meta"><span class="rating">★ 4.6</span><span>30-40 min</span></div><div class="free">Free Delivery</div></div></div>
+                <div class="rest-card"><div class="img dessert">🍰</div><div class="info"><h5>Sweet Treats</h5><div class="meta"><span class="rating">★ 4.5</span><span>15-25 min</span></div><div class="free">Free Delivery</div></div></div>
+                <div class="rest-card"><div class="img pizza">🍕</div><div class="info"><h5>Cheesy Corner</h5><div class="meta"><span class="rating">★ 4.2</span><span>20-30 min</span></div><div class="free">Free Delivery</div></div></div>
+              </div>
+              <!-- duplicate block for seamless infinite loop -->
+              <div id="tabletDupZone"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="app-topbar">
+            <span>☰</span>
+            <span class="brand">Foodie Express</span>
+            <span class="icon">🛒</span>
+          </div>
+          <div class="app-scroll-wrapper" id="phoneWrapper">
+            <div class="app-scroll" id="phoneScroll">
+              <div class="banner">
+                <div class="text">
+                  <h3>Hot & Fresh<br>Delicious Pizza</h3>
+                  <button>Order Now</button>
+                </div>
+                <div class="pizza-emoji">🍕</div>
+              </div>
+
+              <div class="cat-title"><h4>Categories</h4><span>View all</span></div>
+              <div class="categories">
+                <div class="cat-item"><div class="cat-circle">🍕</div><p>Pizza</p></div>
+                <div class="cat-item"><div class="cat-circle">🍔</div><p>Burger</p></div>
+                <div class="cat-item"><div class="cat-circle">🍝</div><p>Pasta</p></div>
+                <div class="cat-item"><div class="cat-circle">🍣</div><p>Sushi</p></div>
+              </div>
+
+              <div class="cat-title"><h4>Popular Restaurants</h4><span>View all</span></div>
+              <div class="restaurant-list" id="phoneContent">
+                <div class="list-card"><div class="thumb pizza">🍕</div><div class="info"><h5>Pizza Palace</h5><div class="meta">★ 4.3 &nbsp; 30-40min &nbsp; Free delivery</div></div></div>
+                <div class="list-card"><div class="thumb burger">🍔</div><div class="info"><h5>Burger House</h5><div class="meta">★ 4.3 &nbsp; 20-30min &nbsp; Free delivery</div></div></div>
+                <div class="list-card"><div class="thumb pasta">🍝</div><div class="info"><h5>Pasta Hub</h5><div class="meta">★ 4.3 &nbsp; 25-35min &nbsp; Free delivery</div></div></div>
+                <div class="list-card"><div class="thumb sushi">🍣</div><div class="info"><h5>Sushi World</h5><div class="meta">★ 4.6 &nbsp; 30-40min &nbsp; Free delivery</div></div></div>
+                <div class="list-card"><div class="thumb dessert">🍰</div><div class="info"><h5>Sweet Treats</h5><div class="meta">★ 4.5 &nbsp; 15-25min &nbsp; Free delivery</div></div></div>
+              </div>
+              <div id="phoneDupZone"></div>
+            </div>
+          </div>
+          <div class="bottom-nav">
+            <div class="nav-item active"><span class="n-icon">🏠</span>Home</div>
+            <div class="nav-item"><span class="n-icon">📦</span>Orders</div>
+            <div class="nav-item"><span class="n-icon">❤️</span>Favorites</div>
+            <div class="nav-item"><span class="n-icon">👤</span>Profile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src ="main.js"></script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a198a6ba8eb2ecc5',t:'MTc4Mzc4MTc0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
